@@ -9,9 +9,17 @@ this.map.on("click", function(event){
 }
 
 
+// MapWrapper.prototype.panToSomewhere = function (coords) {
+//  this.map.panTo(coords)
+// };
 
 MapWrapper.prototype.takeMeToRio = function (coords){
-  L.marker(coords).flyTo(this.map);
+  this.map.panTo(coords);
+
+
+
+  // L.marker(coords).addTo(this.map).bindPopup(`<a href ='http://www.rio.com/practical-rio/copacabana-beach'>more information</a>`).openPopup()
+  // L.marker(coords).flyTo(coords);
   // L.marker(coords).flyTo(latlng, 15, zoom);
 }
 
